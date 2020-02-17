@@ -1,0 +1,10 @@
+Phenotype	var_type
+sample	string
+disease	string
+tissue	string
+biopsy_tissue	string
+patient_id	string
+sample_type	string
+dataset	string
+OS	integer
+OS.time	integer
