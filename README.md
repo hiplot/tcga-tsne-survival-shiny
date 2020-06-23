@@ -1,9 +1,9 @@
 
 <p align="center">📊 <b>TCGA Survival Analysis GUI: Graphical User Interface for Sequential t-SNE / UMAP Survival Analysis</b></p>
 
-Publication🔗[`Sequential Analysis of Transcript Expression Patterns Improves Survival Prediction in Multiple Cancers`]
-(https://doi.org/10.1186/s12885-020-06756-x).
+BMC Cancer 🔗[`Sequential Analysis of Transcript Expression Patterns Improves Survival Prediction in Multiple Cancers`](https://doi.org/10.1186/s12885-020-06756-x). 
 See citation below
+
 ## Usage 
 
 ### 🌐 Online version 
@@ -82,11 +82,10 @@ This tab enables users to preform a custom clustering of patients in any of the 
 
 ## 📕 Publication
 
-**Sequential Analysis of Transcript Expression Patterns Improves Survival Prediction in Multiple Cancers**;
+BMC Cancer 🔗[`Sequential Analysis of Transcript Expression Patterns Improves Survival Prediction in Multiple Cancers`](https://doi.org/10.1186/s12885-020-06756-x). 
 Mandel, J., Avula, R. & Prochownik, E.V. BMC Cancer 20, 297 (2020). https://doi.org/10.1186/s12885-020-06756-x
 
-🔗[`Sequential analysis of transcript expression patterns improves survival prediction in multiple cancer`]
-(https://bmccancer.biomedcentral.com/articles/10.1186/s12885-020-06756-x).
+
 
     
 
