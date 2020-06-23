@@ -1,7 +1,7 @@
 
 <p align="center">📊 <b>TCGA Survival Analysis GUI: Graphical User Interface for Sequential t-SNE / UMAP Survival Analysis</b></p>
 
-## Useage 
+## Usage 
 
 ### 🌐 Online version 
 Go to 🔗[`Sequential t-SNE`](https://chpupsom19.shinyapps.io/survival_analysis_tsne_umap_tcga/). 
