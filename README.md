@@ -4,7 +4,7 @@
 ## Usage 
 
 ### 🌐 Online version 
-Go to 🔗[`Sequential t-SNE`](https://chpupsom19.shinyapps.io/survival_analysis_tsne_umap_tcga/). 
+Go to 🔗[`Sequential t-SNE / UMAP Suvival Analysis Rhiny App`](https://chpupsom19.shinyapps.io/survival_analysis_tsne_umap_tcga/). 
 
 ### 💻 Standalone version  
 <details>
