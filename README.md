@@ -1,10 +1,10 @@
 
 <p align="center">📊 <b>TCGA Survival Analysis GUI: Graphical User Interface for Sequential t-SNE / UMAP Survival Analysis</b></p>
 
-Publication:
+## Publication
+(see citation below)
 
 🔗[`Sequential Analysis of Transcript Expression Patterns Improves Survival Prediction in Multiple Cancers`](https://doi.org/10.1186/s12885-020-06756-x)
-See citation below
 
 ## Usage 
 
