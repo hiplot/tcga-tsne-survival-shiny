@@ -162,7 +162,7 @@ ui <- dashboardPage(
       tabItem(tabName = "scatterplots",
               ####### Row 1 - Cancer and Pathway Selector ###########
               fluidRow(
-                box(width=12,
+                shinydashboard::box(width=12,
                   column(4,uiOutput("cancerSelector")),
                   column(4,conditionalPanel(
                     condition = "typeof input.cancer != 'undefined' && input.cancer != ''",
@@ -189,7 +189,7 @@ ui <- dashboardPage(
                 fluidRow(align="center",
                       #Step 2 Options (Column 1)   
                       column(2,
-                        box(width=12,
+                        shinydashboard::box(width=12,
                          uiOutput("filter_option"),
                          uiOutput("filter_pheno_selector"),
                           tags$style(type="text/css","
@@ -206,27 +206,27 @@ ui <- dashboardPage(
                       ),
                       #Pathway 1 (Column 2)
                       column(5,
-                          box(width=NULL,plotlyOutput('scatterplot_out'),tableOutput("counttable_scatter_p1"),title="t-SNE Clustering", status="primary",solidHeader = TRUE,collapsible = TRUE),
-                          box(width=NULL,plotOutput('survivalplot_P1_out'),title=" Survival Analysis",status="success",solidHeader = TRUE,collapsible = TRUE)
+                          shinydashboard::box(width=NULL,plotlyOutput('scatterplot_out'),tableOutput("counttable_scatter_p1"),title="t-SNE Clustering", status="primary",solidHeader = TRUE,collapsible = TRUE),
+                          shinydashboard::box(width=NULL,plotOutput('survivalplot_P1_out'),title=" Survival Analysis",status="success",solidHeader = TRUE,collapsible = TRUE)
                       ),
                       #Pathway 2 (Column 3)
                       column(5,
                         conditionalPanel(condition= "typeof input.pathway2 != 'undefined' && input.pathway2 !=''",
-                         box(width=NULL,plotlyOutput('scatterplot_out2'),tableOutput("counttable_scatter_p2"),title="t-SNE Clustering", status="primary",solidHeader = TRUE,collapsible = TRUE),
-                         box(width=NULL,plotOutput('survivalplot_P2_out'),title=" Survival Analysis",status="success",solidHeader = TRUE,collapsible = TRUE)
+                         shinydashboard::box(width=NULL,plotlyOutput('scatterplot_out2'),tableOutput("counttable_scatter_p2"),title="t-SNE Clustering", status="primary",solidHeader = TRUE,collapsible = TRUE),
+                         shinydashboard::box(width=NULL,plotOutput('survivalplot_P2_out'),title=" Survival Analysis",status="success",solidHeader = TRUE,collapsible = TRUE)
               )))),
               ####### Row 5 - Sequential Survival Analysis Using Pathway 1 and 2 ###########
               conditionalPanel(condition = "typeof input.cancer != 'undefined' && typeof input.pathway1 != 'undefined' && typeof input.pathway2 != 'undefined' && input.pathway2 !=''",
                 fluidRow(align="center",
                   #Col 1
-                  box(width=2,
+                  shinydashboard::box(width=2,
                      column(width=12,
                       uiOutput("clusterSelector"),
                       uiOutput("clusterSelector2")
                      ),title="Step 3: Sequential Analysis",status="danger",solidHeader=TRUE,collapsible=TRUE,background = "light-blue"
                   ),
                   #Col 2
-                  box(width=10,
+                  shinydashboard::box(width=10,
                     column(12,align="center",
                      htmlOutput("survivalplotheader"),
                      htmlOutput("survivalplotmid"),
@@ -242,7 +242,7 @@ ui <- dashboardPage(
                  #1
                  fluidRow(align="center",
                     column(2),
-                    box(width=10,
+                    shinydashboard::box(width=10,
                       column(12,align="center",
                         uiOutput("create_heatmap_button"),
                         plotOutput('heatmap')),
@@ -251,14 +251,14 @@ ui <- dashboardPage(
                  #2
                  fluidRow(align="center",
                     #Col 1
-                    box(width=2,
+                    shinydashboard::box(width=2,
                      column(width = 12,align="center",
                       uiOutput("clusterSelector_heatmap"),
                       uiOutput("groupSelector2")),
                       title="Step 4: Sequential Dendrogram Analysis with Pathway 1",status="danger",solidHeader=TRUE,collapsible=TRUE,background = "light-blue"
                     ),
                     #Col 2
-                    box(width=10,
+                    shinydashboard::box(width=10,
                      column(width = 12,align="center",
                        htmlOutput("heatmaptitle"),
                        htmlOutput("dendrosurvivalplotheader"),
@@ -274,7 +274,7 @@ ui <- dashboardPage(
       tabItem(tabName = "custom",
               ####### Row 1 - Cancer and Pathway Selector ###########
               fluidRow(
-                box(width=12,
+                shinydashboard::box(width=12,
                   column(4,uiOutput("custom_cancerSelector")),
                   column(4,
                     conditionalPanel(condition = "typeof input.custom_cancer != 'undefined' && input.custom_cancer != ''",
@@ -296,7 +296,7 @@ ui <- dashboardPage(
               ####### Row 2 - Run Options ###########
               conditionalPanel(condition="typeof input.custom_cancer != 'undefined' && input.custom_cancer != '' && typeof input.custom_pathway1 != 'undefined' && input.custom_pathway1 != ''",
                 fluidRow(
-                  box(width=12,
+                  shinydashboard::box(width=12,
                     fluidRow(
                     column(4,uiOutput('exp_data_type')),
                     column(4,uiOutput('run_algo')),
@@ -341,7 +341,7 @@ ui <- dashboardPage(
                 fluidRow(align="center",
                   #Step 2: Options (Column 1)   
                   column(2,
-                   box(width=12,
+                   shinydashboard::box(width=12,
                     htmlOutput("text_filter_custom"),
                     uiOutput("filter_option_custom"),
                     uiOutput("filter_pheno_selector_custom"),
@@ -358,26 +358,26 @@ ui <- dashboardPage(
                     title="Step 2: Filter Phenotype(s) (Optional) and Run Analysis",status="danger",solidHeader=TRUE,collapsible=TRUE,background = "light-blue")
                   ),
                   column(5,
-                   box(width=NULL,plotlyOutput('custom_scatterplot_P1_out'),tableOutput("counttable_custom_scatter_p1"),title="Clustering: Pathway 1", status="primary",solidHeader = TRUE,collapsible = TRUE),
-                   box(width=NULL,plotOutput('custom_survivalplot_P1_out'),title=" Survival Analysis: Pathway 1",status="success",solidHeader = TRUE,collapsible = TRUE)
+                   shinydashboard::box(width=NULL,plotlyOutput('custom_scatterplot_P1_out'),tableOutput("counttable_custom_scatter_p1"),title="Clustering: Pathway 1", status="primary",solidHeader = TRUE,collapsible = TRUE),
+                   shinydashboard::box(width=NULL,plotOutput('custom_survivalplot_P1_out'),title=" Survival Analysis: Pathway 1",status="success",solidHeader = TRUE,collapsible = TRUE)
                   ),   
                   column(5,
                     conditionalPanel(condition= "typeof input.custom_pathway2 != 'undefined' && input.custom_pathway2 !=''",
-                      box(width=NULL,plotlyOutput('custom_scatterplot_P2_out'),tableOutput("counttable_custom_scatter_p2"),title="Clustering: Pathway 2", status="primary",solidHeader = TRUE,collapsible = TRUE),
-                      box(width=NULL,plotOutput('custom_survivalplot_P2_out'),title=" Survival Analysis: Pathway 2",status="success",solidHeader = TRUE,collapsible = TRUE)
+                      shinydashboard::box(width=NULL,plotlyOutput('custom_scatterplot_P2_out'),tableOutput("counttable_custom_scatter_p2"),title="Clustering: Pathway 2", status="primary",solidHeader = TRUE,collapsible = TRUE),
+                      shinydashboard::box(width=NULL,plotOutput('custom_survivalplot_P2_out'),title=" Survival Analysis: Pathway 2",status="success",solidHeader = TRUE,collapsible = TRUE)
                )))),
               ####### Row 6 - Sequential Survival Analysis Using Pathway 1 and 2 ###########
               conditionalPanel(condition = "typeof input.custom_cancer != 'undefined' && typeof input.custom_pathway1 != 'undefined' && typeof input.custom_pathway2 != 'undefined' && input.custom_pathway2 !=''",
                 fluidRow(align="center",
                   # Col 1
-                   box(width=2,
+                   shinydashboard::box(width=2,
                     column(12,
                       uiOutput("custom_group_clusterSelector"),
                       uiOutput("custom_group_clusterSelector2")
                     ),title="Step 3: Sequential Analysis",status="danger",solidHeader=TRUE,collapsible=TRUE,background = "light-blue"
                   ),
                   # Col 2
-                  box(width=10,
+                  shinydashboard::box(width=10,
                     column(10,align="center",       
                       plotOutput('custom_survivalplot_out'), 
                       DT::dataTableOutput("custom_counttable")
@@ -388,7 +388,7 @@ ui <- dashboardPage(
                 #1
                 fluidRow(align="center",
                   column(2),
-                  box(width=10,
+                  shinydashboard::box(width=10,
                     column(12,align="center",
                       uiOutput("custom_create_heatmap_button"),
                       plotOutput('custom_heatmap')),
@@ -397,14 +397,14 @@ ui <- dashboardPage(
                 #2
                 fluidRow(align="center",
                   #Col 1
-                  box(width=2,
+                  shinydashboard::box(width=2,
                    column(width = 12,align="center",
                       uiOutput("custom_clusterSelector_heatmap"),
                       uiOutput("custom_groupSelector2")),
                     title="Step 4: Sequential Dendrogram Analysis with Pathway 1",status="danger",solidHeader=TRUE,collapsible=TRUE,background = "light-blue"
                   ),
                   #Col 2
-                  box(width=10,
+                  shinydashboard::box(width=10,
                     column(width = 12,align="center",
                     #htmlOutput("heatmaptitle"),
                     #htmlOutput("dendrosurvivalplotheader"),
